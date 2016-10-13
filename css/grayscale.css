@@ -28,7 +28,7 @@ h6 {
 }
 p {
   margin: 0 0 25px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
 }
 @media (min-width: 768px) {
@@ -68,22 +68,51 @@ a:focus {
 .navbar-custom .navbar-toggle:active {
   outline: none;
 }
-.navbar-custom .navbar-brand {
+.simply-logo{
   font-weight: 700;
+  color: rgb(223,116,12);
 }
+.navbar-custom .navbar-brand .play-icon{
+  font-weight: 700;
+  color: rgb(48,80,124);
+}
+
 .navbar-custom .navbar-brand:focus {
   outline: none;
 }
-.navbar-custom a {
-  color: white;
+.navbar-custom li #menu-about{
+  color: rgb(255,230,77);
 }
+.navbar-custom li #menu-download{
+  color: rgb(223,116,12);
+}
+.navbar-custom li #menu-mapping{
+  color: rgb(88,156,178);
+}
+
 .navbar-custom .nav li a {
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
 }
-.navbar-custom .nav li a:hover {
-  color: rgba(255, 255, 255, 0.8);
+.simply-logo:hover {
+  font-weight: 700;
+  color: rgba(223,116,12,0.8);
+  outline: none;
+  background-color: transparent;
+}
+.navbar-custom .nav li #menu-download:hover {
+  color: rgba(223,116,12, 0.8);
+  outline: none;
+  background-color: transparent;
+}
+.navbar-custom .nav li #menu-about:hover {
+  color: rgba(255,230,77, 0.8);
+  outline: none;
+  background-color: transparent;
+}
+.navbar-custom .nav li #menu-mapping:hover {
+  color: rgba(111,195,223, 0.8);
   outline: none;
   background-color: transparent;
 }
@@ -92,15 +121,7 @@ a:focus {
   outline: none;
   background-color: transparent;
 }
-.navbar-custom .nav li.active {
-  outline: none;
-}
-.navbar-custom .nav li.active a {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.navbar-custom .nav li.active a:hover {
-  color: white;
-}
+
 @media (min-width: 768px) {
   .navbar-custom {
     padding: 20px 0;
@@ -223,7 +244,6 @@ a:focus {
 .download-section {
   width: 100%;
   padding: 50px 0;
-  color: red;
   background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
@@ -231,21 +251,13 @@ a:focus {
   background-size: cover;
   -o-background-size: cover;
 }
-#map {
-  width: 100%;
-  height: 200px;
-  margin-top: 100px;
-}
+
 @media (min-width: 767px) {
   .content-section {
     padding-top: 250px;
   }
   .download-section {
     padding: 100px 0;
-  }
-  #map {
-    height: 400px;
-    margin-top: 250px;
   }
 }
 .btn {
@@ -287,6 +299,186 @@ ul.banner-social-buttons {
     margin-bottom: 0;
   }
 }
+
+/*Mapping section*/
+#mapping{
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+}
+#map{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  min-height: 400px;
+}
+
+
+#map .leaflet-control-zoom{
+  font-size: 1.2em;
+}
+
+/*sidebars*/
+#mapping{
+  overflow-x: hidden;
+  width: 100%;
+}
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-color: white;
+    color: black;
+    height: 100%;
+    top: 0px;
+    position:absolute;
+}
+
+#map-row{
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px;
+  height: 100%;
+
+}
+#map-container{
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0px;
+}
+#wrapper.toggled {
+    width: 100%;
+    margin: 0 auto;
+    left: 0px;
+    position: absolute;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: absolute;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: black;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+        height: 100%;
+        width: 100%;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    #page-content-wrapper {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/*Footer Section*/
 footer {
   padding: 50px 0;
 }
