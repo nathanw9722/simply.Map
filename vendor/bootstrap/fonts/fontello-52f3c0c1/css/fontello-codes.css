@@ -1,0 +1,18 @@
+
+.icon-database:before { content: '\e800'; } /* '' */
+.icon-play:before { content: '\e801'; } /* '' */
+.icon-arrow-up:before { content: '\e802'; } /* '' */
+.icon-arrow-down:before { content: '\e803'; } /* '' */
+.icon-arrow-right:before { content: '\e804'; } /* '' */
+.icon-arrow-left:before { content: '\e805'; } /* '' */
+.icon-arrow-down-alt:before { content: '\e806'; } /* '' */
+.icon-backwards:before { content: '\e807'; } /* '' */
+.icon-forwards:before { content: '\e808'; } /* '' */
+.icon-menu:before { content: '\e809'; } /* '' */
+.icon-cart:before { content: '\e80a'; } /* '' */
+.icon-open:before { content: '\e80b'; } /* '' */
+.icon-arrow-right-alt:before { content: '\e80c'; } /* '' */
+.icon-arrow-left-alt:before { content: '\e80d'; } /* '' */
+.icon-delete:before { content: '\e80e'; } /* '' */
+.icon-new-page:before { content: '\e80f'; } /* '' */
+.icon-save:before { content: '\e810'; } /* '' */

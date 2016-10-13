@@ -71,8 +71,23 @@ function initmap() {
 //     }
 // }
 
-$("#menu-toggle").click(function(e) {
+/*$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});*/
+$(".layer-toggle").click(function(e){
     e.preventDefault();
     $("#wrapper").toggleClass("toggled");
 });
-
+$("#menu-toggle").click(function(e){
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
+$(".icon-database").hide();
+$(document).on('scroll', function() {
+    if($(this).scrollTop()>=$('#mapping').position().top){
+        $(".icon-database").show(500);
+    }else{
+        $(".icon-database").hide(500);
+    }
+})
