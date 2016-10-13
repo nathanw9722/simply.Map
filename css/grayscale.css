@@ -304,7 +304,9 @@ ul.banner-social-buttons {
 #mapping{
   position: relative;
   height: 100%;
-  margin: 0 auto;
+  margin:0 auto;
+  overflow-x: hidden;
+  width: 100%;
 }
 #map{
   position: absolute;
@@ -319,10 +321,6 @@ ul.banner-social-buttons {
 }
 
 /*sidebars*/
-#mapping{
-  overflow-x: hidden;
-  width: 100%;
-}
 #wrapper {
     width: 100%;
     margin: 0 auto;
@@ -333,7 +331,7 @@ ul.banner-social-buttons {
     background-color: white;
     color: black;
     height: 100%;
-    top: 0px;
+    top: 50px;
     position:absolute;
 }
 
